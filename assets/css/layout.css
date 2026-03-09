@@ -1,0 +1,540 @@
+/* ==================== NAVBAR ==================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    background: transparent; 
+}
+
+/* Navbar saat scroll */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.85); 
+    padding: 15px 8%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.logo-text .title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.logo-text .subtitle {
+    font-size: 0.8rem;
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a i {
+    font-size: 0.7rem;
+    margin-left: 3px;
+}
+
+.nav-links a:hover {
+    color: #d2b48c;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+
+/* ==================== DROPDOWN ==================== */
+.dropdown-menu {
+    position: absolute;
+    top: 230%;
+    left: -100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    min-width: 200px;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    color: #4a3a2a !important;
+    padding: 12px 20px;
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #fdf5e6;
+    color: #bc936a !important;
+}
+
+/* Rotate arrow */
+.dropdown:hover > a i {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.navbar.scrolled .dropdown-menu {
+    background: white;
+}
+
+
+/* ==================== MOBILE NAV ==================== */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: white;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 20px 0;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    /* Mobile dropdown */
+    .dropdown-menu {
+        position: relative; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: none;
+        display: none; 
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        padding: 0;
+        margin-top: 10px;
+        background: #fdf5e6;
+    }
+
+    .dropdown-menu li a {
+        padding: 5px; 
+        font-size: 0.8rem;
+        background: transparent;
+        color: #d2b48c !important; 
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    /* Hamburger animation */
+    #mobile-menu.is-active .bar:nth-child(2) { opacity: 0; }
+    #mobile-menu.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    #mobile-menu.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+
+/* ==================== FOOTER ==================== */
+.main-footer {
+    background-color: #5c4033; 
+    color: #fdf5e6;
+    padding: 80px 0 20px;
+    position: relative;
+    overflow: hidden;
+    clip-path: ellipse(110% 100% at 50% 100%);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+    padding: 20px 5%;
+}
+
+/* Branding */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 45px;
+}
+
+.footer-logo h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Social */
+.social-media p {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fdf5e6;
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #bc936a;
+    transform: translateY(-3px);
+}
+
+/* Contact */
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact ul li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.contact i {
+    color: #bc936a;
+    margin-top: 5px;
+}
+
+/* Map */
+.map-frame {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 180px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.map-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+
+/* ==================== FOOTER RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 30px;
+        padding: 30px 5%;
+    }
+
+    .footer-logo h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        clip-path: ellipse(180% 100% at 50% 100%);
+        padding: 50px 0 30px;
+        text-align: center;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 0 10%;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tagline {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    .contact ul li {
+        margin-left: 30px; 
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icons a {
+        font-size: 1.6rem;
+    }
+
+    .map-frame {
+        height: 200px;
+        border-radius: 15px;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        padding: 20px 5% 0;
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+}
+
+
+/* ==================== BACK TO TOP ==================== */
+#backToTop {
+    display: none; 
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1001;
+    background-color: #bc936a;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+#backToTop:hover {
+    background-color: #4a3a2a;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+    #backToTop {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ==================== ACCESSIBILITY ==================== */
+.accessibility-wrapper {
+    position: fixed;
+    top: 90px; 
+    left: 10px; 
+    z-index: 9999;
+}
+
+.accessibility-btn {
+    background-color: #096fb3;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(8, 60, 143, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.accessibility-menu {
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 60px; 
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    width: 220px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.accessibility-menu.show {
+    display: block !important;
+    z-index: 10000; 
+}
+
+.accessibility-menu ul li a {
+    color: #4a3a2a !important; 
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    gap: 12px;
+}
+
+
+/* ==================== ACCESSIBILITY RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .accessibility-wrapper { top: 150px; }
+    .accessibility-menu { left: 55px; width: 180px; }
+}
+
+@media (max-width: 1024px) {
+    .accessibility-wrapper { top: 100px; }
+    .accessibility-btn { width: 45px; height: 45px; font-size: 1.3rem; }
+    .accessibility-menu { width: 200px; left: 55px; }
+    .accessibility-menu ul li a { padding: 10px 15px; font-size: 0.95rem; gap: 10px; }
+}
+
+
+/* ==================== DARK MODE ==================== */
+body.dark-mode {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .main-navbar, 
+body.dark-mode .main-footer,
+body.dark-mode section {
+    background-color: #1a1a1a !important;
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode a, 
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode p {
+    color: #ffff00 !important;
+}
+
+body.dark-mode .accessibility-menu {
+    background-color: #222 !important;
+    border: 2px solid #ffff00;
+}
+
+body.dark-mode .accessibility-menu ul li a {
+    color: #ffffff !important;
+}
+
+body.dark-mode .accessibility-menu ul li a:hover {
+    background-color: #444;
+}
+
+
+/* ==================== FADE ANIMATION ==================== */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+    visibility: hidden;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+@media (max-width: 1024px) {
+    .fade-up {
+        transform: translateY(15px);
+        transition-duration: 0.4s;
+    }
+}

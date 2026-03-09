@@ -1,0 +1,387 @@
+/* ==================== BUKU PROFILE ==================== */
+.pdf-preview-container {
+    width: 100%;
+    background-color: #c5b2a0;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.download-action {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .pdf-preview-container iframe {
+        height: 450px;
+    }
+    
+    .btn-download-profile {
+        width: 80%;
+        padding: 10px 20px;
+    }
+}
+
+
+/* ==================== STRUKTUR ORGANISASI ==================== */
+.article-header h2 {
+    color: #4a3a2a;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.header-line {
+    width: 60px;
+    height: 4px;
+    background-color: #bc936a;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+.struktur-container {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    overflow-x: auto;
+}
+
+.struktur-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.struktur-image img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        padding: 20px;
+    }
+    
+    .article-header h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* ==================== PEJABAT ==================== */
+.pejabat-section {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* Kepala Dinas */
+.kepala-dinas-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.kepala-text { flex: 1; }
+
+.role-title {
+    color: #4a3a2a;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.dept-name {
+    color: #bc936a;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.bio-text {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.kepala-image-box {
+    flex: 0 0 350px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.kepala-image-box img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.name-tag {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    text-align: center;
+}
+
+.name-tag h5 {
+    color: #4a3a2a;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+/* Staff Grid */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.staff-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-10px);
+}
+
+.staff-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.staff-info {
+    padding: 15px;
+    text-align: center;
+    background-color: #fdfaf5;
+}
+
+.staff-info h5 {
+    margin: 0 0 5px;
+    color: #4a3a2a;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.staff-info p {
+    margin: 0;
+    color: #bc936a;
+    font-size: 0.85rem;
+}
+
+
+/* ==================== PEJABAT RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+    .staff-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .staff-img img {
+        height: 320px; 
+    }
+
+    .kepala-dinas-wrapper { 
+        flex-direction: column; 
+        gap: 30px; 
+    }
+
+    .kepala-image-box { 
+        width: 100%; 
+        max-width: 400px; 
+        margin: 0 auto; 
+    }
+}
+
+@media (max-width: 600px) {
+    .staff-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px;
+    }
+
+    .staff-img img {
+        height: 160px;
+    }
+
+    .staff-info {
+        padding: 10px 5px;
+    }
+
+    .staff-info h5 {
+        font-size: 0.85rem; 
+        line-height: 1.2;
+        margin-bottom: 3px;
+    }
+
+    .staff-info p {
+        font-size: 0.7rem; 
+        line-height: 1.1;
+    }
+
+    .role-title { font-size: 1.4rem; }
+    .dept-name { font-size: 1.1rem; }
+    .bio-text { font-size: 0.9rem; }
+}
+
+
+/* ==================== TENTANG KAMI ==================== */
+.about-section {
+   margin-bottom: 10px;
+}
+
+.about-top {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image-wrapper {
+    flex: 0 0 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+}
+
+/* Diamond Image */
+.diamond-shape {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    transform: rotate(45deg);
+    border: 8px solid #bc936a;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+.diamond-shape img {
+    width: 140%;
+    height: 140%;
+    object-fit: cover;
+    transform: rotate(-45deg) scale(1.2);
+    margin-top: -30%;
+    margin-left: -30%;
+}
+
+.about-description p {
+    line-height: 1.8;
+    color: #4a3a2a;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 0.95rem;
+}
+
+
+/* Vision & Mission */
+.vission-mission-box {
+    background-color: #5c4033; 
+    background-image: linear-gradient(rgba(253, 245, 230, 0.95), rgba(253, 245, 230, 0.95)), url('../images/kawung.png');
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+    background-size: 150px;
+    color: white;
+    padding: 50px;
+    border-radius: 40px;
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.vm-left, .vm-right { flex: 1; }
+
+.vm-item { margin-bottom: 30px; }
+
+.vm-item h3, .vm-right h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.vm-item p {
+    font-style: italic;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.vm-right ol { padding-left: 20px; }
+
+.vm-right li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+
+/* ==================== TENTANG RESPONSIVE ==================== */
+@media (max-width: 768px) {
+
+    .about-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-image-wrapper {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .diamond-shape {
+        width: 200px;
+        height: 200px;
+        border-width: 5px;
+    }
+
+    .about-description p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .vission-mission-box {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+        border-radius: 30px;
+    }
+
+    .vm-item h3, .vm-right h3 {
+        font-size: 1.3rem;
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .vm-right li {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .diamond-shape {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .main-title {
+        font-size: 1.3rem;
+    }
+}

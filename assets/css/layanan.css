@@ -1,0 +1,106 @@
+/* ==================== SUB MENU ==================== */
+.service-sub-menu {
+    margin: 30px 0;
+}
+
+.sub-menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.sub-menu-item {
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 120px;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border: 2px solid #bc936a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    font-size: 2rem;
+    color: #bc936a;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.sub-menu-item span {
+    font-weight: 600;
+    color: #4a3a2a;
+    font-size: 0.9rem;
+}
+
+/* Hover */
+.sub-menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.sub-menu-item:hover .icon-circle {
+    background-color: #bc936a;
+    color: white;
+    box-shadow: 0 8px 20px rgba(188, 147, 106, 0.3);
+}
+
+
+/* ==================== PDF VIEWER ==================== */
+.pdf-viewer-section {
+    margin-top: 20px;
+}
+
+.pdf-container {
+    background: #eee;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.pdf-fallback {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(188, 147, 106, 0.1);
+    border-radius: 10px;
+}
+
+.btn-download-pdf {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #bc936a;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-download-pdf:hover {
+    background-color: #4a3a2a;
+}
+
+
+/* ==================== RESPONSIVE (≤600px) ==================== */
+@media (max-width: 600px) {
+    .sub-menu-grid {
+        gap: 30px;
+    }
+
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .pdf-container iframe {
+        height: 400px;
+    }
+}

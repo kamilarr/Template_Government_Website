@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispangtan Kota Surakarta</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/component.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="mainNavbar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Logo Surakarta" width="40">
+            <div class="logo-text">
+                <span class="title">DISPANGTAN</span>
+                <span class="subtitle">Kota Surakarta</span>
+            </div>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            
+            <li class="dropdown">
+                <a href="#">Profile <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Profile/tentang kami.html" target="_blank">Tentang Kami</a></li>
+                    <li><a href="Profile/struktur organisasi.html" target="_blank">Struktur Organisasi</a></li>
+                    <li><a href="Profile/buku profile.html" target="_blank">Buku Profile</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">PPID <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="PPID/Informasi_publik.html" target="_blank">Informasi Publik</a></li>
+                    <li><a href="PPID/Informasi_berkala.html" target="_blank">Informasi Berkala</a></li>
+                    <li><a href="PPID/Informasi_setiap_saat.html" target="_blank">Informasi Setiap Saat</a></li>
+                    <li><a href="PPID/Informasi_serta_merta.html" target="_blank">Informasi Serta Merta</a></li>
+                    <li><a href="PPID/Informasi_dikecualikan.html" target="_blank">Informasi Dikecualikan</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Layanan <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Layanan/ketahanan_pangan.html" target="_blank">Ketahanan Pangan</a></li>
+                    <li><a href="Layanan/pertanian.html" target="_blank">Pertanian & Perikanan</a></li>
+                    <li><a href="Layanan/veteriner.html" target="_blank">Kesehatan Hewan</a></li>
+                    <li><a href="Layanan/uptd-perikanan.html" target="_blank">UPTD Perikanan</a></li>
+                    <li><a href="Layanan/uptd-rph.html" target="_blank">UPTD RPH & Puskeswan</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Informasi <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Informasi/berita.html" target="_blank">Berita</a></li>
+                    <li><a href="Informasi/infografis.html" target="_blank">Infografis</a></li>
+                    <li><a href="Informasi/galeri.html" target="_blank">Galeri</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#aduan.html">Aduan <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Ulas_Aduan/sampaikan_aduan.html" target="_blank">Sampaikan Aduan</a></li>
+                    <li><a href="Ulas_Aduan/tampilkan_aduan.html" target="_blank">Tampilkan Aduan</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#survei.html">Survei <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://appbagor.surakarta.go.id/sop/skm/instrumen/isi/27" target="_blank">Form Survei</a></li>
+                    <li><a href="Survei/hasil_survei.html" target="_blank">Hasil Survei</a></li>
+                    <li><a href="Survei/faq.html" target="_blank">FAQ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Dinas Ketahanan Pangan & Pertanian <br> Kota Surakarta</h1>
+            <p>Menguatkan Pangan, Mewujudkan Kesejahteraan</p>
+            <form class="search-box" id="homepageSearch">
+                <button type="submit" class="search-btn">
+                    <i class="fa fa-search"></i>
+                </button>
+                <input type="text" name="q" placeholder="Cari Kata Kunci">
+            </form>
+        </div>
+    </header>
+
+    <!-- Tombol Disabilitas -->
+    <div class="accessibility-wrapper">
+        <button class="accessibility-btn" aria-label="Menu Aksesibilitas">
+            <i class="fas fa-universal-access"></i>
+        </button>
+        
+        <div class="accessibility-menu">
+            <ul>
+                <li>
+                    <a href="#" class="zoom-text">
+                        <i class="fas fa-text-height"></i> Perbesar Teks
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="zoom-out-text">
+                        <i class="fas fa-keyboard"></i> Perkecil Teks
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="high-contrast">
+                        <i class="fas fa-adjust"></i> Kontras Tinggi
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <!-- Quick Access Layanan -->
+    <section class="services-section">
+        <div class="container">
+            <div class="services-grid">
+                <a href="Layanan/ketahanan_pangan.html" target="_blank" class="service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-clipboard-list"></i>
+                    </div>
+                    <p>Ketahanan Pangan</p>
+                </a>
+
+                <a href="Layanan/pertanian.html" target="_blank" class="service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-seedling"></i>
+                    </div>
+                    <p>Pertanian & Perikanan</p>
+                </a>
+
+                <a href="Layanan/veteriner.html" target="_blank" class="service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-stethoscope"></i>
+                    </div>
+                    <p>Veteriner & Kesehatan <br> Hewan</p>
+                </a>
+
+                <a href="Layanan/uptd-perikanan.html" target="_blank" class="service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-fish"></i>
+                    </div>
+                    <p>UPTD Perikanan</p>
+                </a>
+
+                <a href="Layanan/uptd-rph.html" target="_blank" class="service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-building"></i>
+                    </div>
+                    <p>UPTD RPH & <br> Puskeswan</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Berita Terkini -->
+    <section class="news-sectio fade-up">
+        <div class="container news-container">
+            
+            <div class="news-list">
+                <h2 class="section-title">Berita Terkini</h2>
+                
+                <div class="news-scroll-container">
+                    
+                    <a href="Informasi/artikel-1.html" target="_blank" class="news-item">
+                        <img src="assets/images/berita/pph.png" alt="News 1">
+                        <div class="news-content">
+                            <h3>Sosialisasi Pola Pangan Harapan (PPH) Dukung Pencegahan Stunting di Kota Surakarta</h3>
+                            <p class="news-date">Selasa, 15 Juli 2025 | 00.00 WIB</p>
+                        </div>
+                    </a>
+
+                    <a href="Informasi/artikel-1.html" target="_blank" class="news-item">
+                        <img src="assets/images/berita/penyerahan gizi.png" alt="News 2">
+                        <div class="news-content">
+                            <h3>Penyerahan Bahan Stimulan Gizi Kepada 503 Ibu Menyusui di 49 Kelurahan di Kota Surakarta</h3>
+                            <p class="news-date">Selasa, 15 Juli 2025 | 00.00 WIB</p>
+                        </div>
+                    </a>
+
+                    <a href="Informasi/artikel-1.html" target="_blank" class="news-item">
+                        <img src="assets/images/berita/pengawasan mutu pangan.png" alt="News 3">
+                        <div class="news-content">
+                            <h3>Dispangtan Surakarta Lakukan Pengawasan Mutu Pangan di SPPG</h3>
+                            <p class="news-date">Rabu, 20 Mei 2025 | 00.00 WIB</p>
+                        </div>
+                    </a>
+
+                    <a href="#" target="_blank" class="news-item">
+                        <img src="assets/images/berita/pph.png" alt="News 4">
+                        <div class="news-content">
+                            <h3>Pelatihan Budidaya Tanaman Hidroponik bagi Kelompok Tani Milenial</h3>
+                            <p class="news-date">Kamis, 22 Mei 2025 | 10.00 WIB</p>
+                        </div>
+                    </a>
+
+                    <a href="#" target="_blank" class="news-item">
+                        <img src="assets/images/berita/penyerahan gizi.png" alt="News 4">
+                        <div class="news-content">
+                            <h3>Pelatihan Budidaya Tanaman Hidroponik bagi Kelompok Tani Milenial</h3>
+                            <p class="news-date">Kamis, 22 Mei 2025 | 10.00 WIB</p>
+                        </div>
+                    </a>
+
+                </div> <div class="btn-container">
+                    <a href="Informasi/berita.html" target="_blank" class="btn-all">Lihat Semua</a>
+                </div>
+            </div>
+
+            <div class="news-image-wrapper">
+                <div class="diamond-frame">
+                    <img src="assets/images/berita/keamanan pangan.png" alt="Feature Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infografis -->
+    <section class="infografis-section fade-up">
+        <div class="container">
+
+            <div class="infografis-header">
+                <h2 class="section-title white">Infografis</h2>
+                <a href="Informasi/infografis.html" target="_blank" class="btn-all-infografis">Lihat Semua</a>
+            </div>
+
+            <div class="infografis-grid">
+                <div class="info-card">
+                    <div class="info-img-box">
+                        <img src="assets/images/infografis/non steril.png" alt="Info Prosedur NKV">
+                    </div>
+                    <div class="info-text">
+                        <h3>Syarat dan Prosedur Rekomendasi Nomor Kontrol Veteriner (NKV)</h3>
+                        <p class="info-date">Kamis, 16 Februari 2025 | 21.12 WIB</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-img-box">
+                        <img src="assets/images/infografis/ambulator.png" alt="Info Operasi Non Steril">
+                    </div>
+                    <div class="info-text">
+                        <h3>Syarat, Prosedur dan Biaya Pelayanan Operasi Non Steril</h3>
+                        <p class="info-date">Kamis, 16 Februari 2025 | 21.12 WIB</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-img-box">
+                        <img src="assets/images/infografis/non steril.png" alt="Info Pelayanan Ambulatoir">
+                    </div>
+                    <div class="info-text">
+                        <h3>Syarat, Prosedur dan Biaya Pelayanan Ambulatoir</h3>
+                        <p class="info-date">Kamis, 16 Februari 2025 | 21.12 WIB</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <p class="quote-text">
+                “Berakar pada ketahanan pangan dan kekuatan sektor agraris, Dinas Ketahanan Pangan dan Pertanian Kota Surakarta hadir untuk memastikan pangan yang aman, bergizi, dan berkelanjutan. Melalui pengelolaan urusan pangan, pertanian, peternakan, serta perikanan, Dispangtan berkontribusi mendorong ekonomi kota yang tangguh dan berkeadilan bagi generasi kini dan mendatang”
+            </p>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section class="galeri-section fade-up">
+        <div class="container">
+            <h2 class="section-title center">Galeri</h2>
+            
+            <div class="galeri-grid">
+                <div class="galeri-item small">
+                    <img src="assets/images/berita/pph.png" alt="Kegiatan 1">
+                </div>
+                <div class="galeri-item tall">
+                    <img src="assets/images/berita/penyerahan gizi.png" alt="Kegiatan 2">
+                </div>
+                <div class="galeri-item extra-tall">
+                    <img src="assets/images/berita/keamanan pangan.png" alt="Kegiatan 3">
+                </div>
+                <div class="galeri-item tall">
+                    <img src="assets/images/berita/penyerahan gizi.png" alt="Kegiatan 4">
+                </div>
+                <div class="galeri-item small">
+                    <img src="assets/images/berita/pph.png" alt="Kegiatan 5">
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-footer">
+            <a href="Informasi/galeri.html" target="_blank" class="btn-more-gallery">
+                Lihat Selengkapnya
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Survei Kepuasan Masyarakat -->
+    <section class="survei-section fade-up">
+        <div class="container survei-container">
+            
+            <div class="survei-content">
+                <h2 class="section-title">Survei Kepuasan Masyarakat</h2>
+                <hr class="survei-divider">
+                <p>
+                    Isi survei kepuasan masyarakat terkait pandangan Anda, terhadap pelayanan di lingkungan Dinas Ketahanan Pangan dan Pertanian cukup 2 menit melalui tombol dibawah.
+                </p>
+                
+                <div class="btn-container">
+                    <a href="#" class="btn-all">Klik Survei</a>
+                </div>
+            </div>
+
+            <div class="survei-logos">
+                <a href="https://moniks.surakarta.go.id" target="_blank" class="logo-box moniks">
+                    <h3 class="logo-title">MONIKS</h3>
+                    <p class="logo-subtitle">Monitoring Informasi<br>Kota Surakarta</p>
+                </a>
+
+                <a href="https://sinikita.surakarta.go.id" target="_blank" class="logo-box sinikita">
+                    <img src="assets/images/sinikita.png" alt="SINIKITA">
+                </a>
+
+                <a href="https://ulas.surakarta.go.id" target="_blank" class="logo-box ulas">
+                    <img src="assets/images/ulas.png" alt="ULAS">
+                </a>
+
+                <a href="https://jagoantamsis.com" target="_blank" class="logo-box jagoan-tamsis">
+                    <img src="assets/images/jagoan tamsis.png" alt="Jagoan Tamsis">
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Peta Indeks Ketahanan dan Kerentanan Pangan -->
+    <section class="map-section fade-up">
+        <div class="container map-container">
+            <h2 class="section-title">Indeks Ketahanan & Kerentanan Pangan</h2>
+            
+            <div class="mini-gunungan-divider">
+                <div class="line"></div>
+                <div class="gunungan-icon">
+                    <img src="../assets/images/gunungan2.png" alt="Gunungan">
+                </div>
+                <div class="line"></div>
+            </div>
+            
+            <div class="map-wrapper">
+                <img src="assets/images/peta indeks.png" alt="Peta Indeks Ketahanan dan Kerentanan Pangan Nasional 2024">
+            </div>
+
+            <div class="btn-all-container">
+                <a href="https://fsva.badanpangan.go.id/" target="_blank" class="btn-all">Buka Peta Ketahanan dan Kerentanan Pangan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            
+            <div class="footer-column branding">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Logo Kota Surakarta">
+                    <h2>DISPANGTAN KOTA SURAKARTA</h2>
+                </div>
+                <p class="tagline">Menguatkan Pangan, Mewujudkan Kesejahteraan</p>
+                <div class="social-media">
+                    <p>Ikuti Media Sosial Kami</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/dispangtan_surakarta/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/pemkotsolo" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@dinaspertaniankpppemerinta7419" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column contact">
+                <h3>Kontak Kami</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jl. Jagalan No.26, Jagalan, Kec. Jebres, Kota Surakarta, Jawa Tengah 57128</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>(0271) 656816</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>dispangtan@surakarta.go.id</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column map-location">
+                <h3>Lokasi Kami</h3>
+                <div class="map-frame">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.105151523415!2d110.83716087574747!3d-7.563483974697964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a16f646760663%3A0x9a2a01b73a02a3c1!2sDinas%20Pertanian%2C%20Ketahanan%20Pangan%20dan%20Perikanan%20Kota%20Surakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dispangtan Kota Surakarta</p>
+        </div>
+    </footer>
+
+    <!-- Tombol Kembali ke Atas -->
+    <button id="backToTop" title="Kembali ke Atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="script.js"></script>
+</body>
+</html>

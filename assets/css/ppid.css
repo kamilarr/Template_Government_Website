@@ -1,0 +1,161 @@
+/* ==================== HEADER ==================== */
+.article-header h2 {
+    color: #4a3a2a;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.header-line {
+    width: 60px;
+    height: 4px;
+    background-color: #bc936a;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+
+/* ==================== INFO LIST ==================== */
+.info-cat-list {
+    margin: 15px 0 30px 20px;
+    list-style-type: disc;
+}
+
+.info-cat-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* ==================== PERIODIC INFO ==================== */
+.ppid-periodic-info h3 {
+    color: #4a3a2a;
+    margin-bottom: 15px;
+}
+
+.periodic-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.periodic-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #fffdfb;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #bc936a22;
+}
+
+.p-num {
+    background: #bc936a;
+    color: white;
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.p-text strong {
+    display: block;
+    color: #4a3a2a;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.p-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+
+/* ==================== RESPONSIVE (≤768px) ==================== */
+@media (max-width: 768px) {
+    .periodic-item {
+        flex-direction: row;
+    }
+}
+
+
+/* ==================== YEAR FILTER ==================== */
+.year-filter {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.year-btn {
+    padding: 10px 25px;
+    border: 2px solid #bc936a;
+    background: transparent;
+    color: #bc936a;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.year-btn.active, 
+.year-btn:hover {
+    background: #bc936a;
+    color: white;
+}
+
+
+/* ==================== FILE LIST ==================== */
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: #fdfaf5;
+    border-radius: 10px;
+    border-left: 5px solid #bc936a;
+    transition: 0.3s;
+}
+
+.file-item:hover {
+    transform: translateX(5px);
+    background: #f7f1e6;
+}
+
+.btn-view {
+    text-decoration: none;
+    background: #4a3a2a;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+
+/* ==================== MOBILE ADJUSTMENT ==================== */
+@media (max-width: 768px) {
+    .procedure-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    .file-item { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px; 
+    }
+}
