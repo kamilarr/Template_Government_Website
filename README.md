@@ -27,12 +27,18 @@ pemerintah dalam membangun website resmi dengan tampilan yang modern, informatif
 
 ## Cara Menjalankan Project
 1. **Download atau Clone Repository**
+   ```bash
    git clone https://github.com/kamilarr/Template_Government_Website.git
-2. **Masuk ke folder project**
+   ```
+3. **Masuk ke folder project**
+    ```bash
    Template_Government_Website
-3. **Buka file utama**
+    ```
+5. **Buka file utama**
+   ```bash
    home.html
-4. Website akan langsung berjalan di browser.
+   ```
+7. Website akan langsung berjalan di browser.
 
 ## Catatan Pengembangan
 * **Status**: Front-End Template
